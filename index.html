@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Academic research portfolio of Muhammad Shoaib Khalid — photocatalysis, nanomaterials, heterogeneous catalysis, and chemical engineering.">
+<title>Muhammad Shoaib Khalid | Research Portfolio</title>
+<style>
+:root{
+  --navy:#0e2742; --blue:#1769aa; --sky:#eaf4fb; --ink:#17202a;
+  --muted:#667085; --line:#e4e7ec; --paper:#ffffff; --bg:#f7f9fc;
+  --green:#1f7a63; --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line)}
+nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:800;color:var(--navy);letter-spacing:.01em}
+.navlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:14px}
+.hero{background:linear-gradient(135deg,#0e2742 0%,#173f65 58%,#1769aa 100%);color:white;padding:88px 0 76px}
+.hero-grid{display:grid;grid-template-columns:1.5fr .75fr;gap:46px;align-items:center}
+.kicker{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:800;color:#b8dcf5}
+h1{font-size:50px;line-height:1.08;margin:10px 0 16px}
+.hero .lead{font-size:20px;max-width:780px;color:#e8f1f8}
+.badges{display:flex;flex-wrap:wrap;gap:9px;margin:22px 0 0}
+.badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);font-size:13px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.btn{display:inline-block;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:750;border:1px solid rgba(255,255,255,.65)}
+.btn.primary{background:white;color:var(--navy)}
+.btn.ghost{color:white}
+.hero-card{background:white;color:var(--ink);padding:24px;border-radius:16px;box-shadow:0 18px 45px rgba(0,0,0,.18)}
+.hero-card h3{margin:0 0 12px;color:var(--navy)}
+.hero-card p{margin:8px 0;color:var(--muted);font-size:14px}
+.hero-card a{font-weight:700}
+
+.hero-photo{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:14px;display:block;margin-bottom:16px;border:1px solid var(--line)}
+.email-pill{display:inline-block;margin-top:4px;padding:10px 12px;border-radius:8px;background:#f5f9fd;border:1px solid #d9e8f4;font-weight:700;word-break:break-all}
+section{padding:66px 0}
+section.white{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-size:31px;margin:0 0 8px;color:var(--navy)}
+.intro{max-width:820px;color:var(--muted);margin:0 0 30px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  align-items:start;
+}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:23px}
+.card h3{margin:0 0 10px;color:var(--navy);font-size:19px}
+.card p{margin:8px 0}
+.soft{background:var(--sky)}
+.label{font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--blue)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.tag{font-size:12px;padding:5px 9px;border-radius:999px;background:#edf4fa;color:#274f72;border:1px solid #d9e8f4}
+.result{border-left:4px solid var(--green);padding:10px 13px;background:#f4fbf8;border-radius:6px;margin-top:15px}
+.result strong{color:var(--green)}
+.pub{padding:20px 0;border-bottom:1px solid var(--line)}
+.pub:last-child{border-bottom:0}
+.pub-title{font-size:17px;font-weight:800;color:var(--navy)}
+.pub-meta{color:var(--muted);font-size:14px;margin:4px 0 7px}
+.pub-links{display:flex;gap:14px;flex-wrap:wrap;font-size:14px;font-weight:700}
+.timeline{border-left:2px solid #d7e2eb;margin-left:7px;padding-left:24px}
+.timeline-item{position:relative;margin:0 0 26px}
+.timeline-item:before{content:"";position:absolute;left:-31px;top:7px;width:12px;height:12px;background:var(--blue);border-radius:50%;border:3px solid white;box-shadow:0 0 0 1px #b9cada}
+.timeline-item h3{margin:0;color:var(--navy)}
+.timeline-item .date{font-size:13px;color:var(--blue);font-weight:800}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{background:white;border:1px solid var(--line);border-radius:8px;padding:9px 12px;font-size:14px}
+.contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.contact-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.contact-item strong{display:block;color:var(--navy);margin-bottom:4px}
+.notice{margin-top:24px;border-left:4px solid var(--blue);padding:13px 15px;background:#f5faff;border-radius:6px;color:#445}
+footer{background:#0b1724;color:#c7d2de;padding:34px 0;font-size:14px}
+@media(max-width:820px){
+  .hero-grid,.grid2,.grid3,.contact-grid{grid-template-columns:1fr}
+  h1{font-size:39px}
+  nav{flex-direction:column;align-items:flex-start;padding:12px 0}
+  .navlinks{padding-bottom:6px}
+}
+.research-image{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:18px 0;
+  border-radius:10px;
+  border:1px solid var(--line);
+}.research-image-large{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:22px 0;
+  border-radius:10px;
+  border:1px solid var(--line);
+}.materials-image{
+  width:100%;
+  height:auto;
+  display:block;
+  margin:16px 0 14px;
+  border-radius:10px;
+  border:1px solid var(--line);
+}
+
+.materials-card p{
+  font-size:15px;
+  color:var(--muted);
+  line-height:1.6;
+}.reactor-image{
+  width:100%;
+  height:280px;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  margin:16px 0 14px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:white;
+}.mechanism-card{
+  display:flex;
+  flex-direction:column;
+}
+
+.mechanism-top-image{
+  width:100%;
+  height:180px;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  margin:14px 0 12px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:white;
+}
+
+.mechanism-text{
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.6;
+  margin:6px 0 14px;
+}
+
+.mechanism-bottom-image{
+  width:100%;
+  height:190px;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  margin-top:4px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:white;
+}/* Professional publication typography */
+
+#publications{
+  font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+#publications .pub-title{
+  font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+  font-size:18px;
+  font-weight:700;
+  line-height:1.45;
+  color:var(--navy);
+  margin-bottom:6px;
+}
+
+#publications .pub-meta{
+  font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+  font-size:14.5px;
+  font-weight:400;
+  line-height:1.55;
+  color:var(--muted);
+}
+
+#publications .pub-links{
+  font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+  font-size:13.5px;
+  font-weight:600;
+  margin-top:7px;
+}
+
+#publications .pub{
+  padding:22px 0;
+}</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav>
+  <div class="brand">Muhammad Shoaib Khalid</div>
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container hero-grid">
+  <div>
+    <div class="kicker">Academic Research Portfolio</div>
+    <h1>Muhammad Shoaib Khalid</h1>
+    <p class="lead">
+      Researcher in photocatalysis, semiconductor heterostructures, nanomaterials, heterogeneous catalysis,
+      and sustainable chemical transformations.
+    </p>
+    <div class="badges">
+      <span class="badge">Photocatalysis</span>
+      <span class="badge">Nanomaterials</span>
+      <span class="badge">Heterogeneous Catalysis</span>
+      <span class="badge">Semiconductor Heterostructures</span>
+      <span class="badge">Chemical Engineering</span>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="https://scholar.google.com/citations?hl=en&user=Y9tNtxoAAAAJ" target="_blank">Google Scholar</a>
+      <a class="btn ghost" href="https://orcid.org/0000-0002-5351-5775" target="_blank">ORCID</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/mshoaibkhalid69/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+  <aside class="hero-card">
+    <img class="hero-photo" src="profile-photo.jpg" alt="Portrait of Muhammad Shoaib Khalid">
+    <h3>Contact</h3>
+    <p><strong>Email</strong><br><a href="mailto:m.shoaibphd.2026@gmail.com">m.shoaibphd.2026@gmail.com</a></p>
+  </aside>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+  <h2>About Me</h2>
+  <p class="intro">
+    I earned my Master’s degree in Physical Chemistry from the University of Chinese Academy of Sciences (UCAS), conducting my research at the Dalian Institute of Chemical Physics (DICP), Chinese Academy of Sciences, within the State Key Laboratory of Catalysis. My research focused on the synthesis and characterization of metal oxide semiconductors for light-driven catalytic oxidation reactions. I am currently seeking a Ph.D. position in the field of nanomaterials, with particular interest in their applications in energy conversion and storage.
+  </p>
+  <div class="grid3">
+    <div class="card"><div class="label">Research Theme</div><h3>Photocatalytic Organic Transformation</h3><img class="reactor-image"
+     src="images/photooxidation-reactor.jpg"
+     alt="Photocatalytic reactor used for oxidation of benzyl alcohol to benzaldehyde"><p>Selective light-driven conversion of organic molecules using semiconductor catalysts and molecular oxygen.</p></div>
+    <div class="card materials-card">
+
+  <div class="label">Materials Design</div>
+
+  <h3>0D/1D Heterostructures</h3>
+
+  <img class="materials-image"
+       src="images/materials-design.jpg"
+       alt="Hydrothermal synthesis of Bi2MoO6 sodium titanate heterostructure">
+
+  <p>
+    Hydrothermal synthesis enables controlled growth of semiconductor
+    nanostructures under elevated temperature and pressure. In this work,
+    Na<sub>2</sub>Ti<sub>3</sub>O<sub>7</sub> nanotubes served as the 1D support
+    for the in situ growth of Bi<sub>2</sub>MoO<sub>6</sub> nanoclusters,
+    forming a 0D/1D heterostructure.
+  </p>
+
+</div>
+
+<div class="card mechanism-card">
+
+  <div class="label">Mechanistic Study</div>
+
+  <h3>Charge Transport & Mechanism</h3>
+
+  <img class="mechanism-top-image"
+       src="images/scavenger-graph.jpg"
+       alt="Scavenger experiment graph showing active species contribution">
+
+  <p class="mechanism-text">
+    Radical trapping experiments were used to identify the active species involved
+    in the photocatalytic oxidation process and to support the proposed charge
+    transfer pathway. The scavenger results, together with the mechanistic model,
+    help explain the catalytic behavior of the heterostructure.
+  </p>
+
+  <img class="mechanism-bottom-image"
+       src="images/charge-transfer-mechanism.jpg"
+       alt="Charge transfer mechanism of the photocatalytic heterostructure">
+
+</div></section>
+
+<section id="research" class="white">
+<div class="container">
+  <h2>Selected Research Projects</h2>
+  <p class="intro">Projects shown here are limited to research directly associated with my academic work.</p>
+
+  <div class="grid2">
+    <article class="card soft">
+      <div class="label">First-author Research</div>
+      <h3>Bi<sub>2</sub>MoO<sub>6</sub>/Na<sub>2</sub>Ti<sub>3</sub>O<sub>7</sub> Heterostructures for Blue-Light Photooxidation</h3>
+      <p>
+        Developed 0D/1D bismuth molybdate cluster-anchored sodium titanate nanotube heterostructures for the
+        selective photocatalytic oxidation of benzyl alcohol to benzaldehyde under blue light.
+      </p>
+<img class="research-image"
+     src="images/bmt-graphical-abstract.jpg"
+     alt="Graphical abstract of Bi2MoO6 sodium titanate heterostructure">
+      <div class="result"><strong>Representative result:</strong> the optimized BMT-10 catalyst achieved 6.8 mmol<sub>converted BzOH</sub> g<sub>cat</sub><sup>−1</sup> h<sup>−1</sup>.</div>
+      <div class="tags">
+        <span class="tag">Hydrothermal Synthesis</span><span class="tag">XRD</span><span class="tag">TEM/STEM</span>
+        <span class="tag">UV–Vis DRS</span><span class="tag">Mott–Schottky</span><span class="tag">EIS</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="label">Research Project</div>
+      <h3>CoFe<sub>2</sub>O<sub>4</sub>/Na<sub>2</sub>Ti<sub>3</sub>O<sub>7</sub> Type-II Heterojunctions</h3>
+      <p>
+        Investigated spinel ferrite-anchored titanate nanotube heterojunctions for blue-light-driven selective
+        oxidation, emphasizing semiconductor coupling, charge-transfer behavior, and catalyst performance.
+      </p>
+<img class="research-image"
+     src="images/cft-mechanism.jpg"
+     alt="Charge transfer mechanism of CoFe2O4 sodium titanate heterojunction">
+      <div class="tags">
+        <span class="tag">Spinel Ferrites</span><span class="tag">Photocatalysis</span><span class="tag">Heterojunctions</span>
+        <span class="tag">Photocurrent</span><span class="tag">EIS</span><span class="tag">GC–MS</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="label">Collaborative Research</div>
+      <h3>BiFeO<sub>3</sub>/Na<sub>2</sub>Ti<sub>3</sub>O<sub>7</sub> p–n Heterostructures</h3>
+      <p>
+        Contributed to research on bismuth ferrite cluster/titanate nanotube heterostructures for efficient blue-light
+        photooxidation, including scientific visualization and manuscript preparation.
+      </p>
+<img class="research-image-large"
+     src="images/bft-femto.jpg"
+     alt="Femtosecond transient absorption spectroscopy results for BiFeO3 sodium titanate heterostructure">
+      <div class="result"><strong>Published outcome:</strong> Applied Catalysis B: Environment and Energy, 2025.</div>
+      <div class="tags">
+        <span class="tag">p–n Heterojunction</span><span class="tag">S-scheme</span><span class="tag">Photocatalysis</span>
+        <span class="tag">Scientific Writing</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="label">Research Review</div>
+      <h3>Sustainable Nanomaterials for Energy & Environmental Photocatalysis</h3>
+      <p>
+        Reviewed layered photocatalytic nanomaterials and single-atom catalysts, including their synthesis,
+        structure, catalytic mechanisms, CO<sub>2</sub> conversion, pollutant remediation, and energy-related applications.
+      </p>
+      <div class="tags">
+        <span class="tag">Nanomaterials</span><span class="tag">Single-Atom Catalysts</span>
+        <span class="tag">CO₂ Conversion</span><span class="tag">Environmental Remediation</span>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="publications">
+<div class="container">
+  <h2>Selected Publications</h2>
+  <p class="intro">A selected list of peer-reviewed work. For the most current record, please visit Google Scholar or ORCID.</p>
+
+  <div class="card">
+    <div class="pub">
+      <div class="pub-title">0D/1D Heterostructure of Bismuth Molybdate Cluster-Anchored Sodium Titanate Nanotubes for Blue-Light-Driven Photooxidation</div>
+      <div class="pub-meta">Muhammad Shoaib Khalid et al. • ACS Applied Nano Materials • 2025 • 8(12), 6201–6209</div>
+      <div class="pub-links"><a href="https://doi.org/10.1021/acsanm.5c00555" target="_blank">DOI</a><a href="https://scholar.google.com/citations?hl=en&user=Y9tNtxoAAAAJ" target="_blank">Google Scholar</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Type II Heterojunction of Spinel Ferrite-Anchored Titanate Nanotubes for Blue-Light-Driven Photocatalytic Oxidation</div>
+      <div class="pub-meta">Yifei Zhang, Irshad Ahmad, Muhammad Shoaib Khalid, et al. • Journal of Alloys and Compounds • 2025 • 1042, 184012</div>
+      <div class="pub-links"><a href="https://doi.org/10.1016/j.jallcom.2025.184012" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">0D/1D p–n Heterostructured Composite of Bismuth Ferrite Perovskite Clusters on Sodium Titanate Nanotube Arouse Exceptional Blue-Light-Driven Photooxidation</div>
+      <div class="pub-meta">Qiuhan Li, Yifei Zhang, Liangliang Xu, et al., Muhammad Shoaib Khalid, et al. • Applied Catalysis B: Environment and Energy • 2025 • 361, 124706</div>
+      <div class="pub-links"><a href="https://doi.org/10.1016/j.apcatb.2024.124706" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Recent Advances in Sustainable Nanomaterials for Energy Conversion and Environmental Remediation via Photocatalysis</div>
+      <div class="pub-meta">Muhammad Shoaib Khalid, Gao Li, Tasmia Azam, Muhammad Asad, Zhen Zhao • Clean Energy Science and Technology • 2024 • 2(3), 176</div>
+      <div class="pub-links"><a href="https://doi.org/10.18686/cest.v2i3.176" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">Configuration Effect of Plasmonic Vanadium–Titanium Solid Solutions for Photo-oxidation of Benzyl Alcohol</div>
+      <div class="pub-meta">Xia Gong, Quanquan Shi, Muhammad Shoaib Khalid, et al. • ACS Applied Nano Materials • 2024 • 7(2), 2062–2071</div>
+      <div class="pub-links"><a href="https://doi.org/10.1021/acsanm.3c05332" target="_blank">DOI</a></div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-title">New Strategies on Green Synthesis of Dimethyl Carbonate from Carbon Dioxide and Methanol over Oxide Composites</div>
+      <div class="pub-meta">Yifei Zhang, Muhammad Shoaib Khalid, Meng Wang, Gao Li • Molecules • 2022 • 27(17), 5417</div>
+      <div class="pub-links"><a href="https://doi.org/10.3390/molecules27175417" target="_blank">DOI</a></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="education" class="white">
+<div class="container">
+  <h2>Academic Background</h2>
+  <p class="intro">A concise education timeline for visitors who want context for the research portfolio.</p>
+  <div class="timeline-item">
+  <div class="date">2022 – 2025</div>
+
+  <h3>Master's — Physical Chemistry</h3>
+
+  <p>
+  <a href="https://www.ucas.ac.cn/"
+     target="_blank"
+     rel="noopener noreferrer">
+     University of Chinese Academy of Sciences (UCAS)
+  </a>;
+  research conducted at the
+  <a href="http://www.dicp.cas.cn/"
+     target="_blank"
+     rel="noopener noreferrer">
+     Dalian Institute of Chemical Physics (DICP)
+  </a>,
+  Chinese Academy of Sciences.
+</p>
+</div>
+    <div class="timeline-item">
+  <div class="date">Completed 2016</div>
+
+  <h3>Bachelor's — Chemical Engineering</h3>
+
+  <p>
+    <a href="https://uog.edu.pk/"
+       target="_blank"
+       rel="noopener noreferrer">
+       University of Gujrat, Pakistan
+    </a>
+  </p>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+  <h2>Research Skills</h2>
+  <p class="intro">Methods and tools used across catalyst synthesis, materials characterization, and photocatalytic research.</p>
+  <div class="skills">
+    <span class="skill">Hydrothermal Synthesis</span><span class="skill">Sol–Gel Synthesis</span>
+    <span class="skill">Catalyst Synthesis</span><span class="skill">Heterogeneous Catalysis</span>
+    <span class="skill">X-ray Diffraction (XRD)</span><span class="skill">Raman Spectroscopy</span>
+    <span class="skill">X-ray Photoelectron Spectroscopy (XPS)</span><span class="skill">SEM</span>
+    <span class="skill">TEM / HRTEM</span><span class="skill">STEM / EDS</span>
+    <span class="skill">UV–Vis DRS</span><span class="skill">Mott–Schottky Analysis</span>
+    <span class="skill">Electrochemical Impedance Spectroscopy (EIS)</span><span class="skill">Photocurrent Measurements</span>
+    <span class="skill">GC–MS</span><span class="skill">Origin</span><span class="skill">ImageJ</span>
+    <span class="skill">Gatan DigitalMicrograph</span><span class="skill">MDI JADE</span>
+  </div>
+</div>
+</section>
+
+<section id="contact" class="white">
+<div class="container">
+  <h2>Contact & Research Profiles</h2>
+  <p class="intro">For research collaboration, academic opportunities, or professional inquiries.</p>
+  <div class="contact-grid">
+    <div class="contact-item"><strong>Email</strong><a href="mailto:m.shoaibphd.2026@gmail.com">m.shoaibphd.2026@gmail.com</a></div>
+    <div class="contact-item"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/mshoaibkhalid69/" target="_blank">linkedin.com/in/mshoaibkhalid69</a></div>
+    <div class="contact-item"><strong>Google Scholar</strong><a href="https://scholar.google.com/citations?hl=en&user=Y9tNtxoAAAAJ" target="_blank">View Google Scholar profile</a></div>
+    <div class="contact-item"><strong>ORCID</strong><a href="https://orcid.org/0000-0002-5351-5775" target="_blank">0000-0002-5351-5775</a></div>
+  </div>
+  <div class="notice">
+    Portfolio note: only public or approved research figures should be added. Unpublished data, confidential mechanisms,
+    or collaborator-owned figures should not be posted without permission.
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">© 2026 Muhammad Shoaib Khalid • Academic Research Portfolio</div>
+</footer>
+</body>
+</html>
