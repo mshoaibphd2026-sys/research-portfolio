@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Muhammad Shoaib Khalid</title>
+
+<style>
+
+body{
+  margin:0;
+  font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+  background:#f7f9fc;
+  color:#17202a;
+  line-height:1.6;
+}
+
+
+/* TOP NAVIGATION */
+
+header{
+  background:white;
+  border-bottom:1px solid #e4e7ec;
+}
+
+.nav-container{
+  max-width:1120px;
+  margin:auto;
+  padding:0 24px;
+}
+
+nav{
+  min-height:68px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  font-size:17px;
+  font-weight:700;
+  color:#102d49;
+}
+
+.navlinks{
+  display:flex;
+  gap:20px;
+}
+
+.navlinks a{
+  color:#1769aa;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+}
+
+.navlinks a:hover{
+  text-decoration:underline;
+}
+
+
+/* MAIN PAGE */
+
+.container{
+  max-width:1120px;
+  margin:auto;
+  padding:50px 24px;
+}
+
+.gallery-heading{
+  margin-bottom:45px;
+}
+
+.gallery-heading h1{
+  font-size:38px;
+  color:#102d49;
+  margin-bottom:10px;
+}
+
+.gallery-heading p{
+  color:#667085;
+  font-size:17px;
+}
+
+
+/* SECTION */
+
+.gallery-section{
+  margin-bottom:65px;
+}
+
+.gallery-section h2{
+  color:#1769aa;
+  font-size:26px;
+  margin-bottom:8px;
+}
+
+.section-description{
+  color:#667085;
+  margin-bottom:24px;
+}
+
+
+/* IMAGE GRID */
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+}
+
+
+/* PHOTO CARD */
+
+.gallery-item{
+  background:white;
+  border:1px solid #e4e7ec;
+  border-radius:12px;
+  overflow:hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.gallery-item:hover{
+  transform:translateY(-4px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.gallery-item img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+}
+
+.caption{
+  padding:14px 16px 16px;
+  font-size:14px;
+  color:#4b5563;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .gallery-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+}
+
+
+@media(max-width:600px){
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  nav{
+    flex-direction:column;
+    align-items:flex-start;
+    padding:15px 0;
+  }
+
+  .navlinks{
+    flex-wrap:wrap;
+    margin-top:8px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="nav-container">
+
+<nav>
+
+<div class="brand">
+Muhammad Shoaib Khalid
+</div>
+
+<div class="navlinks">
+
+<a href="index.html">Home</a>
+
+<a href="index.html#about">About</a>
+
+<a href="index.html#research">Projects</a>
+
+<a href="index.html#publications">Publications</a>
+
+<a href="gallery.html">Gallery</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+<div class="container">
+
+
+<div class="gallery-heading">
+
+<h1>Gallery</h1>
+
+
+</div>
+
+
+
+<!-- LABORATORY -->
+
+<section class="gallery-section">
+
+<h2>Laboratory</h2>
+
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+
+<img src="images/gallery/laboratory/lab-1.jpg"
+     alt="Laboratory research activity">
+
+<div class="caption">
+Fire safety training during a laboratory emergency-response drill.
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="images/gallery/laboratory/lab-2.jpg"
+     alt="Research laboratory">
+
+<div class="caption">
+Participation in a laboratory fire-drill and emergency-response exercise.
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img src="images/gallery/laboratory/lab-3.jpg"
+     alt="Laboratory instrumentation">
+
+<div class="caption">
+TEM analysis of prepared samples using the Hitachi HT7700 transmission electron microscope.
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- GRADUATION -->
+
+<section class="gallery-section">
+
+<h2>Graduation</h2>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+
+<img src="images/gallery/graduation/graduation-1.jpg"
+     alt="Graduation ceremony">
+
+<div class="caption">
+Master’s thesis presentation and academic discussion at DICP.
+</div>
+
+</div>
+
+
+<div class="gallery-item">
+
+  <img src="images/gallery/graduation/graduation-3.jpg"
+       alt="Graduation moment">
+
+  <div class="caption">
+    Graduation portrait at the State Key Laboratory of Catalysis, DICP.
+  </div>
+
+</div>
+
+
+<div class="gallery-item">
+
+  <img src="images/gallery/graduation/graduation-4.jpg"
+       alt="Graduation moment">
+
+  <div class="caption">
+    Graduation moment with research mentors and colleagues at DICP.
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- GROUP ACTIVITIES -->
+
+<section class="gallery-section">
+
+<h2>Group Activities</h2>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+
+<img src="images/gallery/group-activities/group-1.jpg"
+     alt="Research group activity">
+
+<div class="caption">
+Research group activity with colleagues.
+</div>
+
+</div>
+
+
+
+</section>
+
+
+</div>
+
+</main>
+
+
+</body>
+
+</html>

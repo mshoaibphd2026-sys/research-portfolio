@@ -207,54 +207,443 @@ footer{background:#0b1724;color:#c7d2de;padding:34px 0;font-size:14px}
 
 .publication-subheading:first-child{
   margin-top:0;
+}/* Make text consistent in all three research-theme cards */
+.grid3 .card p{
+  font-family:"Segoe UI", Arial, Helvetica, sans-serif;
+  font-size:15px;
+  font-weight:400;
+  line-height:1.6;
+  color:var(--muted);
+}/* =========================================
+   PROFESSIONAL HOMEPAGE HERO
+   ========================================= */
+
+.hero{
+  padding:68px 0;
+  background:linear-gradient(
+    120deg,
+    #102d49 0%,
+    #174b75 55%,
+    #1c6fa9 100%
+  );
+  color:white;
+}
+
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.45fr) minmax(300px,0.65fr);
+  gap:60px;
+  align-items:center;
+}
+
+
+.hero-copy{
+  max-width:760px;
+}
+
+
+.kicker{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:#c5e3f5;
+  margin-bottom:14px;
+}
+
+
+.hero h1{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:52px;
+  line-height:1.08;
+  letter-spacing:-0.025em;
+  margin:0 0 22px;
+  color:white;
+}
+
+
+.hero-lead{
+  font-family:"Segoe UI", Arial, sans-serif;
+  max-width:700px;
+  font-size:19px;
+  line-height:1.65;
+  font-weight:400;
+  color:#edf4f9;
+  margin:0;
+}
+
+
+/* RESEARCH KEYWORDS */
+
+.research-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+  margin-top:26px;
+}
+
+
+.research-tag{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:13px;
+  font-weight:500;
+  padding:6px 11px;
+  border-radius:999px;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.20);
+
+  color:#f7fbff;
+}
+
+
+/* PROFILE BUTTONS */
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:11px;
+  margin-top:31px;
+}
+
+
+.profile-button{
+  display:inline-block;
+  padding:11px 17px;
+  border-radius:7px;
+
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:14px;
+  font-weight:650;
+
+  text-decoration:none;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.primary-button{
+  background:white;
+  color:#102d49;
+  border:1px solid white;
+}
+
+
+.secondary-button{
+  background:transparent;
+  color:white;
+  border:1px solid rgba(255,255,255,0.55);
+}
+
+
+.profile-button:hover{
+  transform:translateY(-2px);
+  text-decoration:none;
+}
+
+
+.primary-button:hover{
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+.secondary-button:hover{
+  background:rgba(255,255,255,0.08);
+}
+
+
+/* PROFILE CARD */
+
+.hero-profile-card{
+  background:white;
+
+  border-radius:16px;
+
+  padding:18px;
+
+  box-shadow:
+    0 14px 34px rgba(0,0,0,0.16);
+
+  color:#17202a;
+}
+
+
+.hero-profile-photo{
+  width:100%;
+  aspect-ratio:4/5;
+
+  object-fit:cover;
+  object-position:center top;
+
+  display:block;
+
+  border-radius:11px;
+}
+
+
+.hero-profile-content{
+  padding:17px 8px 5px;
+}
+
+
+.hero-profile-name{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:20px;
+  line-height:1.3;
+  font-weight:700;
+  color:#102d49;
+}
+
+
+.hero-profile-role{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:14px;
+  color:#667085;
+  margin-top:4px;
+}
+
+
+.profile-divider{
+  height:1px;
+  background:#e4e7ec;
+  margin:16px 0;
+}
+
+
+.profile-contact-label{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:12px;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:0.07em;
+  color:#667085;
+  margin-bottom:3px;
+}
+
+
+.profile-email{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:14px;
+  font-weight:600;
+
+  color:#1769aa;
+
+  text-decoration:none;
+
+  word-break:break-word;
+}
+
+
+.profile-email:hover{
+  text-decoration:underline;
+}
+
+
+/* NAVIGATION REFINEMENT */
+
+header nav{
+  min-height:66px;
+}
+
+
+.brand{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:17px;
+  font-weight:700;
+}
+
+
+.navlinks a{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:14px;
+  font-weight:500;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  .hero{
+    padding:52px 0;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:38px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero-lead{
+    font-size:17px;
+  }
+
+  .hero-profile-card{
+    max-width:420px;
+  }
+
+}
+
+
+@media(max-width:520px){
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .research-tag{
+    font-size:12px;
+  }
+
+  .profile-button{
+    padding:10px 14px;
+  }
+
+}.project-publication{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:13px;
+  font-weight:600;
+  color:#0f766e;
+  margin:7px 0 12px;
+}
+
+#research .label{
+  font-family:"Segoe UI", Arial, sans-serif;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:0.10em;
+  text-transform:uppercase;
+  color:#1769aa;
+}.project-image-link img{
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
+  cursor:pointer;
+}
+
+.project-image-link:hover img{
+  transform:scale(1.02);
+  box-shadow:0 8px 20px rgba(0,0,0,0.12);
 }</style>
 </head>
 <body>
 <header>
-<div class="container">
-<nav>
-  <div class="brand">Muhammad Shoaib Khalid</div>
-  <div class="navlinks">
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+  <div class="container">
+    <nav>
+
+      <div class="brand">
+        Muhammad Shoaib Khalid
+      </div>
+
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#research">Projects</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </nav>
   </div>
-</nav>
-</div>
 </header>
 
-<main>
+
 <section class="hero">
-<div class="container hero-grid">
-  <div>
-    <div class="kicker">Academic Research Portfolio</div>
-    <h1>Muhammad Shoaib Khalid</h1>
-    <p class="lead">
-      Researcher in photocatalysis, semiconductor heterostructures, nanomaterials, heterogeneous catalysis,
-      and sustainable chemical transformations.
-    </p>
-    <div class="badges">
-      <span class="badge">Photocatalysis</span>
-      <span class="badge">Nanomaterials</span>
-      <span class="badge">Heterogeneous Catalysis</span>
-      <span class="badge">Semiconductor Heterostructures</span>
-      <span class="badge">Chemical Engineering</span>
-    </div>
-    <div class="cta">
-      <a class="btn primary" href="https://scholar.google.com/citations?hl=en&user=Y9tNtxoAAAAJ" target="_blank">Google Scholar</a>
-      <a class="btn ghost" href="https://orcid.org/0000-0002-5351-5775" target="_blank">ORCID</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/mshoaibkhalid69/" target="_blank">LinkedIn</a>
-    </div>
+
+  <div class="container hero-grid">
+
+    <!-- LEFT SIDE -->
+
+    <div class="hero-copy">
+
+      <div class="kicker">
+        Academic Research Portfolio
+      </div>
+
+      <h1>
+        Muhammad Shoaib Khalid
+      </h1>
+
+      <p class="hero-lead">
+        Physical chemist working on functional nanomaterials,
+        semiconductor heterostructures, photocatalysis, and
+        sustainable energy conversion.
+      </p>
+
+
+      <div class="research-tags">
+
+        <span class="research-tag">
+          Photocatalysis
+        </span>
+
+        <span class="research-tag">
+          Nanomaterials
+        </span>
+
+        <span class="research-tag">
+          Semiconductor Heterostructures
+        </span>
+
+        <span class="research-tag">
+          Energy Conversion
+        </span>
+
+        <span class="research-tag">
+          Electrochemistry
+        </span>
+
+      </div> </div>
+
+
+
+      
+
+
+    <!-- RIGHT SIDE -->
+
+    <aside class="hero-profile-card">
+
+      <img class="hero-profile-photo"
+           src="profile-photo.jpg"
+           alt="Muhammad Shoaib Khalid">
+
+      <div class="hero-profile-content">
+
+        <div class="hero-profile-name">
+          Muhammad Shoaib Khalid
+        </div>
+
+        <div class="hero-profile-role">
+          Physical Chemist | Researcher
+        </div>
+
+        <div class="profile-divider"></div>
+
+        <div class="profile-contact-label">
+          Email
+        </div>
+
+        <a class="profile-email"
+           href="mailto:m.shoaibphd.2026@gmail.com">
+          m.shoaibphd.2026@gmail.com
+        </a>
+
+      </div>
+
+    </aside>
+
   </div>
-  <aside class="hero-card">
-    <img class="hero-photo" src="profile-photo.jpg" alt="Portrait of Muhammad Shoaib Khalid">
-    <h3>Contact</h3>
-    <p><strong>Email</strong><br><a href="mailto:m.shoaibphd.2026@gmail.com">m.shoaibphd.2026@gmail.com</a></p>
-  </aside>
-</div>
+
 </section>
 
 <section id="about">
@@ -264,18 +653,35 @@ footer{background:#0b1724;color:#c7d2de;padding:34px 0;font-size:14px}
     I earned my Master’s degree in Physical Chemistry from the University of Chinese Academy of Sciences (UCAS), conducting my research at the Dalian Institute of Chemical Physics (DICP), Chinese Academy of Sciences, within the State Key Laboratory of Catalysis. My research focused on the synthesis and characterization of metal oxide semiconductors for light-driven catalytic oxidation reactions. I am currently seeking a Ph.D. position in the field of nanomaterials, with particular interest in their applications in energy conversion and storage.
   </p>
   <div class="grid3">
-    <div class="card"><div class="label">Research Theme</div><h3>Photocatalytic Organic Transformation</h3><img class="reactor-image"
-     src="images/photooxidation-reactor.jpg"
-     alt="Photocatalytic reactor used for oxidation of benzyl alcohol to benzaldehyde"><p>Selective light-driven conversion of organic molecules using semiconductor catalysts and molecular oxygen.</p></div>
+    <div class="card">
+
+  <div class="label">Research Theme</div>
+
+  <h3>Photocatalytic Organic Transformation</h3>
+
+  <a href="photocatalysis.html" class="research-image-link">
+    <img class="reactor-image"
+         src="images/photooxidation-reactor.jpg"
+         alt="Photocatalytic reactor used for oxidation of benzyl alcohol to benzaldehyde">
+  </a>
+
+  <p>
+    Selective light-driven conversion of organic molecules using semiconductor
+    catalysts and molecular oxygen.
+  </p>
+
+</div>
     <div class="card materials-card">
 
   <div class="label">Materials Design</div>
 
   <h3>0D/1D Heterostructures</h3>
 
+  <a href="materials-design.html">
   <img class="materials-image"
        src="images/materials-design.jpg"
-       alt="Hydrothermal synthesis of Bi2MoO6 sodium titanate heterostructure">
+       alt="Hydrothermal synthesis">
+</a>
 
   <p>
     Hydrothermal synthesis enables controlled growth of semiconductor
@@ -293,9 +699,11 @@ footer{background:#0b1724;color:#c7d2de;padding:34px 0;font-size:14px}
 
   <h3>Charge Transport & Mechanism</h3>
 
+ <a href="mechanism.html">
   <img class="mechanism-top-image"
        src="images/scavenger-graph.jpg"
-       alt="Scavenger experiment graph showing active species contribution">
+       alt="Radical scavenger experiment">
+</a>
 
   <p class="mechanism-text">
     Radical trapping experiments were used to identify the active species involved
@@ -304,28 +712,42 @@ footer{background:#0b1724;color:#c7d2de;padding:34px 0;font-size:14px}
     help explain the catalytic behavior of the heterostructure.
   </p>
 
+  <a href="mechanism.html">
   <img class="mechanism-bottom-image"
        src="images/charge-transfer-mechanism.jpg"
-       alt="Charge transfer mechanism of the photocatalytic heterostructure">
+       alt="Charge-transfer mechanism">
+</a>
 
 </div></section>
 
 <section id="research" class="white">
 <div class="container">
-  <h2>Selected Research Projects</h2>
+  <h2>Projects</h2>
   <p class="intro">Projects shown here are limited to research directly associated with my academic work.</p>
 
   <div class="grid2">
     <article class="card soft">
-      <div class="label">First-author Research</div>
-      <h3>Bi<sub>2</sub>MoO<sub>6</sub>/Na<sub>2</sub>Ti<sub>3</sub>O<sub>7</sub> Heterostructures for Blue-Light Photooxidation</h3>
+      <div class="label">Master's Thesis Project</div>
+      <h3>
+  0D/1D Bi<sub>2</sub>MoO<sub>6</sub>/Na<sub>2</sub>Ti<sub>3</sub>O<sub>7</sub>
+  Heterostructure for Blue-Light Photooxidation
+</h3>
+<div class="project-publication">
+  Published in ACS Applied Nano Materials • First Author
+</div>
       <p>
-        Developed 0D/1D bismuth molybdate cluster-anchored sodium titanate nanotube heterostructures for the
-        selective photocatalytic oxidation of benzyl alcohol to benzaldehyde under blue light.
-      </p>
-<img class="research-image"
-     src="images/bmt-graphical-abstract.jpg"
-     alt="Graphical abstract of Bi2MoO6 sodium titanate heterostructure">
+  Designed an in-situ hydrothermally synthesized 0D/1D
+  Bi<sub>2</sub>MoO<sub>6</sub>/Na<sub>2</sub>Ti<sub>3</sub>O<sub>7</sub>
+  heterostructure for the selective blue-light-driven oxidation of
+  benzyl alcohol to benzaldehyde.
+</p>
+<a href="bmt-project.html" class="project-image-link">
+
+  <img class="research-image"
+       src="images/bmt-graphical-abstract.jpg"
+       alt="Bi2MoO6 Na2Ti3O7 heterostructure">
+
+</a>
       <div class="result"><strong>Representative result:</strong> the optimized BMT-10 catalyst achieved 6.8 mmol<sub>converted BzOH</sub> g<sub>cat</sub><sup>−1</sup> h<sup>−1</sup>.</div>
       <div class="tags">
         <span class="tag">Hydrothermal Synthesis</span><span class="tag">XRD</span><span class="tag">TEM/STEM</span>
@@ -588,23 +1010,140 @@ footer{background:#0b1724;color:#c7d2de;padding:34px 0;font-size:14px}
 </div>
 </section>
 
-<section id="contact" class="white">
-<div class="container">
-  <h2>Contact & Research Profiles</h2>
-  <p class="intro">For research collaboration, academic opportunities, or professional inquiries.</p>
-  <div class="contact-grid">
-    <div class="contact-item"><strong>Email</strong><a href="mailto:m.shoaibphd.2026@gmail.com">m.shoaibphd.2026@gmail.com</a></div>
-    <div class="contact-item"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/mshoaibkhalid69/" target="_blank">linkedin.com/in/mshoaibkhalid69</a></div>
-    <div class="contact-item"><strong>Google Scholar</strong><a href="https://scholar.google.com/citations?hl=en&user=Y9tNtxoAAAAJ" target="_blank">View Google Scholar profile</a></div>
-    <div class="contact-item"><strong>ORCID</strong><a href="https://orcid.org/0000-0002-5351-5775" target="_blank">0000-0002-5351-5775</a></div>
-  </div>
-  <div class="notice">
-    Portfolio note: only public or approved research figures should be added. Unpublished data, confidential mechanisms,
-    or collaborator-owned figures should not be posted without permission.
+<section id="contact" class="contact-section">
+
+  <div class="container">
+
+    <div class="contact-header">
+
+      
+
+      <h2>Contact</h2>
+
+      <p>
+        Interested in research collaboration, or academic
+        discussions? Feel free to get in touch or connect through my research profiles.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <!-- EMAIL -->
+
+      <a class="contact-card"
+         href="mailto:m.shoaibphd.2026@gmail.com">
+
+        <div class="contact-top-row">
+  <img class="contact-icon"
+       src="images/icons/email.png"
+       alt="Email">
+
+  <div class="contact-card-type">
+    Email
   </div>
 </div>
-</section>
-</main>
+
+        <div class="contact-card-title">
+         
+        </div>
+
+        <div class="contact-card-value">
+          m.shoaibphd.2026@gmail.com
+        </div>
+
+        
+
+      </a>
+
+
+      <!-- LINKEDIN -->
+
+      <a class="contact-card"
+   href="https://www.linkedin.com/in/mshoaibkhalid69/"
+   target="_blank"
+   rel="noopener noreferrer">
+
+  <div class="contact-top-row">
+    <img class="contact-icon"
+         src="images/icons/linkedin.png"
+         alt="LinkedIn">
+
+    <div class="contact-card-type">
+      LinkedIn
+    </div>
+  </div>
+
+  <div class="contact-card-value">
+    My LinkedIn Profile
+  </div>
+
+</a>
+
+
+      <!-- GOOGLE SCHOLAR -->
+
+      <a class="contact-card"
+         href="https://scholar.google.com/citations?hl=en&user=Y9tNtxoAAAAJ"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <div class="contact-top-row">
+  <img class="contact-icon"
+       src="images/icons/google-scholar.png"
+       alt="Google Scholar">
+
+  <div class="contact-card-type">
+    Google Scholar
+  </div>
+</div>
+
+        
+
+        <div class="contact-card-value">
+          View Google Scholar Profile
+        </div>
+
+        
+
+      </a>
+
+
+      <!-- ORCID -->
+
+      <a class="contact-card"
+         href="https://orcid.org/0000-0002-5351-5775"
+         target="_blank"
+         rel="noopener noreferrer">
+
+        <div class="contact-top-row">
+  <img class="contact-icon"
+       src="images/icons/orcid.png"
+       alt="ORCID">
+
+  <div class="contact-card-type">
+    ORCID
+  </div>
+</div>
+
+        
+
+        <div class="contact-card-value">
+          0000-0002-5351-5775
+        </div>
+
+        
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section></main>
 
 <footer>
 <div class="container">© 2026 Muhammad Shoaib Khalid • Academic Research Portfolio</div>
