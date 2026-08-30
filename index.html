@@ -546,7 +546,276 @@ header nav{
 
   border:1px solid #d5e7f4;
   border-radius:20px;
-}</style>
+}
+
+/* =========================================
+   CATALYSIS-ORIENTED HERO REFINEMENT
+   ========================================= */
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:72px 0 70px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(93,190,232,.18) 0, rgba(93,190,232,0) 24%),
+    radial-gradient(circle at 18% 82%, rgba(91,169,126,.12) 0, rgba(91,169,126,0) 24%),
+    linear-gradient(120deg,#0d2b46 0%,#123f62 52%,#176f9d 100%);
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to right,rgba(0,0,0,.85),rgba(0,0,0,.2));
+}
+
+.hero .container{
+  position:relative;
+  z-index:2;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.5fr) minmax(330px,.62fr);
+  gap:68px;
+  align-items:center;
+}
+
+.hero-copy{
+  max-width:800px;
+  position:relative;
+}
+
+.hero-kicker-row{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.kicker{
+  margin:0;
+}
+
+.hero-domain{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:5px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);
+  color:#dff3ff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.hero-domain::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#7dd3a7;
+  box-shadow:0 0 0 4px rgba(125,211,167,.12);
+}
+
+.hero h1{
+  font-size:54px;
+  line-height:1.06;
+  letter-spacing:-.03em;
+  margin:0 0 22px;
+}
+
+.hero-lead{
+  max-width:760px;
+  font-size:19px;
+  line-height:1.68;
+  color:#edf6fb;
+}
+
+.research-tags{
+  margin-top:24px;
+}
+
+.research-tag{
+  background:rgba(255,255,255,.075);
+  border:1px solid rgba(255,255,255,.20);
+  backdrop-filter:blur(4px);
+}
+
+.catalysis-graphic{
+  margin-top:28px;
+  max-width:760px;
+  padding:17px 18px 15px;
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:14px;
+  background:rgba(5,31,51,.28);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+.catalysis-graphic-title{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+  color:#bfe6f8;
+  margin-bottom:12px;
+}
+
+.catalysis-flow{
+  display:grid;
+  grid-template-columns:1fr auto 1.15fr auto 1fr auto 1.2fr;
+  gap:10px;
+  align-items:center;
+}
+
+.flow-step{
+  min-width:0;
+  text-align:center;
+}
+
+.flow-symbol{
+  width:54px;
+  height:54px;
+  margin:0 auto 7px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:"Segoe UI",Arial,sans-serif;
+  font-weight:800;
+  font-size:15px;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.25);
+  background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.05));
+  box-shadow:0 8px 18px rgba(0,0,0,.12);
+}
+
+.flow-symbol.interface{
+  border-radius:13px;
+  width:66px;
+  background:linear-gradient(145deg,rgba(73,167,215,.28),rgba(125,211,167,.12));
+}
+
+.flow-symbol.charge{
+  font-family:"Cambria Math","Times New Roman",serif;
+  font-size:17px;
+}
+
+.flow-symbol.surface{
+  border-radius:13px 13px 22px 22px;
+  background:linear-gradient(145deg,rgba(125,211,167,.22),rgba(255,255,255,.06));
+}
+
+.flow-name{
+  display:block;
+  font-size:12px;
+  line-height:1.25;
+  color:#e8f4fa;
+  font-weight:650;
+}
+
+.flow-arrow{
+  color:#8ed3ef;
+  font-size:21px;
+  font-weight:300;
+  transform:translateY(-9px);
+}
+
+.catalysis-graphic-caption{
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,.10);
+  font-size:12px;
+  color:#cfe4ef;
+  text-align:center;
+  letter-spacing:.01em;
+}
+
+.hero-profile-wrap{
+  position:relative;
+}
+
+.hero-profile-card{
+  position:relative;
+  z-index:2;
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:0 24px 54px rgba(2,23,38,.28);
+}
+
+.hero-profile-focus{
+  margin-top:8px;
+  font-size:12.5px;
+  line-height:1.45;
+  color:#557083;
+}
+
+.hero-catalyst-motif{
+  position:absolute;
+  width:330px;
+  height:330px;
+  right:-92px;
+  top:-82px;
+  opacity:.32;
+  z-index:1;
+  pointer-events:none;
+}
+
+.hero-catalyst-motif line{
+  stroke:rgba(210,241,255,.75);
+  stroke-width:2;
+}
+
+.hero-catalyst-motif circle{
+  fill:#d9f1fb;
+  stroke:rgba(255,255,255,.95);
+  stroke-width:1.5;
+}
+
+.hero-catalyst-motif circle.active{
+  fill:#7dd3a7;
+}
+
+@media(max-width:900px){
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+  .hero-profile-wrap{
+    max-width:430px;
+  }
+  .hero-catalyst-motif{
+    right:-60px;
+  }
+}
+
+@media(max-width:680px){
+  .hero{
+    padding:54px 0 50px;
+  }
+  .hero h1{
+    font-size:38px;
+  }
+  .catalysis-flow{
+    grid-template-columns:1fr 1fr;
+    gap:15px 10px;
+  }
+  .flow-arrow{
+    display:none;
+  }
+  .catalysis-graphic{
+    padding:16px;
+  }
+}
+
+</style>
 </head>
 <body>
 <header>
@@ -576,86 +845,130 @@ header nav{
 
   <div class="container hero-grid">
 
-    <!-- LEFT SIDE -->
-
+    <!-- LEFT: RESEARCH POSITIONING -->
     <div class="hero-copy">
 
-      <div class="kicker">
-        Academic Research Portfolio
+      <div class="hero-kicker-row">
+        <div class="kicker">Academic Research Portfolio</div>
+        <div class="hero-domain">Catalysis &amp; Functional Nanomaterials</div>
       </div>
 
-      <h1>
-        Muhammad Shoaib Khalid
-      </h1>
+      <h1>Muhammad Shoaib Khalid</h1>
 
       <p class="hero-lead">
-        Physical chemist working on functional nanomaterials,
-        semiconductor heterostructures, photocatalysis, and
-        sustainable energy conversion.
+        Physical chemist developing semiconductor nanomaterials and heterostructures
+        to understand interfacial charge transfer and enable selective photocatalysis
+        and sustainable energy conversion.
       </p>
 
-
       <div class="research-tags">
-
-        <span class="research-tag">
-          Photocatalysis
-        </span>
-
-        <span class="research-tag">
-          Nanomaterials
-        </span>
-
-        <span class="research-tag">
-          Semiconductor Heterostructures
-        </span>
-
-        <span class="research-tag">
-          Energy Conversion
-        </span>
-
-        <span class="research-tag">
-          Electrochemistry
-        </span>
-
-      </div> </div>
-
-
-
-      
-
-
-    <!-- RIGHT SIDE -->
-
-    <aside class="hero-profile-card">
-
-      <img class="hero-profile-photo"
-           src="profile-photo.jpg"
-           alt="Muhammad Shoaib Khalid">
-
-      <div class="hero-profile-content">
-
-        <div class="hero-profile-name">
-          Muhammad Shoaib Khalid
-        </div>
-
-        <div class="hero-profile-role">
-          Physical Chemist | Researcher
-        </div>
-
-        <div class="profile-divider"></div>
-
-        <div class="profile-contact-label">
-          Email
-        </div>
-
-        <a class="profile-email"
-           href="mailto:m.shoaibphd.2026@gmail.com">
-          m.shoaibphd.2026@gmail.com
-        </a>
-
+        <span class="research-tag">Photocatalysis</span>
+        <span class="research-tag">Semiconductor Heterostructures</span>
+        <span class="research-tag">Charge-Carrier Dynamics</span>
+        <span class="research-tag">Catalytic Mechanisms</span>
+        <span class="research-tag">Energy Conversion</span>
+        <span class="research-tag">Electrochemistry</span>
       </div>
 
-    </aside>
+      <!-- Compact catalysis workflow graphic -->
+      <div class="catalysis-graphic" aria-label="Research workflow from light absorption to catalytic surface reaction">
+        <div class="catalysis-graphic-title">Research Approach</div>
+
+        <div class="catalysis-flow">
+          <div class="flow-step">
+            <div class="flow-symbol">hν</div>
+            <span class="flow-name">Light Absorption</span>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step">
+            <div class="flow-symbol interface">0D/1D</div>
+            <span class="flow-name">Heterointerface</span>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step">
+            <div class="flow-symbol charge">e⁻ / h⁺</div>
+            <span class="flow-name">Charge Transfer</span>
+          </div>
+
+          <div class="flow-arrow">→</div>
+
+          <div class="flow-step">
+            <div class="flow-symbol surface">CAT</div>
+            <span class="flow-name">Selective Catalysis</span>
+          </div>
+        </div>
+
+        <div class="catalysis-graphic-caption">
+          Materials design • band engineering • interfacial kinetics • surface reaction pathways
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: PROFILE CARD + CATALYST MOTIF -->
+    <div class="hero-profile-wrap">
+
+      <svg class="hero-catalyst-motif" viewBox="0 0 320 320" aria-hidden="true">
+        <line x1="65" y1="95" x2="130" y2="58"></line>
+        <line x1="130" y1="58" x2="195" y2="94"></line>
+        <line x1="195" y1="94" x2="258" y2="61"></line>
+        <line x1="65" y1="95" x2="68" y2="170"></line>
+        <line x1="68" y1="170" x2="132" y2="205"></line>
+        <line x1="132" y1="205" x2="196" y2="169"></line>
+        <line x1="196" y1="169" x2="258" y2="205"></line>
+        <line x1="195" y1="94" x2="196" y2="169"></line>
+        <line x1="130" y1="58" x2="132" y2="132"></line>
+        <line x1="132" y1="132" x2="196" y2="169"></line>
+        <line x1="132" y1="205" x2="132" y2="274"></line>
+        <line x1="132" y1="274" x2="198" y2="238"></line>
+        <line x1="198" y1="238" x2="258" y2="270"></line>
+        <circle cx="65" cy="95" r="8"></circle>
+        <circle cx="130" cy="58" r="8" class="active"></circle>
+        <circle cx="195" cy="94" r="8"></circle>
+        <circle cx="258" cy="61" r="8"></circle>
+        <circle cx="68" cy="170" r="8"></circle>
+        <circle cx="132" cy="132" r="8" class="active"></circle>
+        <circle cx="132" cy="205" r="8"></circle>
+        <circle cx="196" cy="169" r="8" class="active"></circle>
+        <circle cx="258" cy="205" r="8"></circle>
+        <circle cx="132" cy="274" r="8"></circle>
+        <circle cx="198" cy="238" r="8" class="active"></circle>
+        <circle cx="258" cy="270" r="8"></circle>
+      </svg>
+
+      <aside class="hero-profile-card">
+
+        <img class="hero-profile-photo"
+             src="profile-photo.jpg"
+             alt="Muhammad Shoaib Khalid">
+
+        <div class="hero-profile-content">
+
+          <div class="hero-profile-name">Muhammad Shoaib Khalid</div>
+
+          <div class="hero-profile-role">Physical Chemist | Researcher</div>
+          <div class="hero-profile-focus">
+            Photocatalysis • Semiconductor Interfaces • Energy Conversion
+          </div>
+
+          <div class="profile-divider"></div>
+
+          <div class="profile-contact-label">Email</div>
+
+          <a class="profile-email"
+             href="mailto:m.shoaibphd.2026@gmail.com">
+            m.shoaibphd.2026@gmail.com
+          </a>
+
+        </div>
+
+      </aside>
+
+    </div>
 
   </div>
 
